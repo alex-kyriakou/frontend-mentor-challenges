@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+  --color-red: hsl(0, 78%, 62%);
+  --color-cyan: hsl(180, 62%, 55%);
+  --color-orange: hsl(34, 97%, 64%);
+  --color-blue: hsl(212, 86%, 64%);
+
+  --color-veryDarkBlue: hsl(234, 12%, 34%);
+  --color-grayishBlue: hsl(229, 6%, 66%);
+  --color-veryLightGray: hsl(0, 0%, 98%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--color-veryLightGray);
+}
+
+header {
+  margin: 4rem auto;
+  max-width: 500px;
+  text-align: center;
+}
+
+.container-text {
+  text-align: center;
+
+  width: 500px;
+  height: 155px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-weight: 200;
+  color: var(--color-veryDarkBlue);
+  /* margin: 0; */
+}
+
+span {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-veryDarkBlue);
+}
+
+p {
+  margin-top: 0.7rem;
+  color: var(--color-grayishBlue);
+}
+
+.container-cards {
+  margin: 0 auto;
+  max-width: 1440px;
+  /* height: 670px; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  padding: 30px;
+  margin: 18px;
+  width: 350px;
+  border-radius: 7px;
+  /* height: 250px; */
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0.5px 15px 20px #0335bd1c;
+  position: relative;
+}
+
+.card h2 {
+  color: var(--color-veryDarkBlue);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 14px;
+  margin: 15px 0 40px;
+}
+
+.card img {
+  display: block;
+  margin-left: auto;
+}
+
+.card-mid {
+  transform: translateY(50%);
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+}
+
+.card-blue::after {
+  background-color: var(--color-blue);
+}
+
+.card-red::after {
+  background-color: var(--color-red);
+}
+
+.card-cyan::after {
+  background-color: var(--color-cyan);
+}
+
+.card-orange::after {
+  background-color: var(--color-orange);
+}
+
+footer {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+@media (max-width: 1157px) {
+  .card-mid {
+    transform: translateY(0);
+  }
+}
